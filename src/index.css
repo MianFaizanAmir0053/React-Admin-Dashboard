@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @media not all and (min-width: 768px) {
+    font-size: 10px;
+  }
+}
