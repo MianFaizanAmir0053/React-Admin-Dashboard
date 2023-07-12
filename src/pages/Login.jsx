@@ -47,13 +47,6 @@ export default function SignIn() {
 
   const handleSubmit = (event, { email, password }) => {
     event.preventDefault();
-    // dispatch(setLoading(true));
-    // dispatch(setUser({ email, password }));
-    // dispatch(setLoading(false));
-    // dispatch(setError(null));
-    // localStorage.setItem("user", JSON.stringify({ email, password }));
-    // navigate("/");
-
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
@@ -126,6 +119,7 @@ export default function SignIn() {
                 label="Password"
                 placeholder="faizan123"
                 type="password"
+                placeholder="faizan123"
                 id="password"
                 autoComplete="current-password"
               />
