@@ -119,7 +119,6 @@ export default function SignIn() {
                 label="Password"
                 placeholder="faizan123"
                 type="password"
-                placeholder="faizan123"
                 id="password"
                 autoComplete="current-password"
               />
