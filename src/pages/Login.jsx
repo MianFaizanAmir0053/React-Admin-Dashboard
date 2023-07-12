@@ -113,6 +113,7 @@ export default function SignIn() {
                 fullWidth
                 id="email"
                 label="Email Address"
+                placeholder="faizan123@gmail.com"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -124,6 +125,7 @@ export default function SignIn() {
                 name="password"
                 label="Password"
                 type="password"
+                placeholder="faizan123"
                 id="password"
                 autoComplete="current-password"
               />
