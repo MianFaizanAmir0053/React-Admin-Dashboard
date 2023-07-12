@@ -47,13 +47,6 @@ export default function SignIn() {
 
   const handleSubmit = (event, { email, password }) => {
     event.preventDefault();
-    // dispatch(setLoading(true));
-    // dispatch(setUser({ email, password }));
-    // dispatch(setLoading(false));
-    // dispatch(setError(null));
-    // localStorage.setItem("user", JSON.stringify({ email, password }));
-    // navigate("/");
-
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
