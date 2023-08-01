@@ -117,7 +117,7 @@ export default function SignIn() {
                 fullWidth
                 name="password"
                 label="Password"
-                placeholder="faizan123"
+                placeholder="12345678"
                 type="password"
                 id="password"
                 autoComplete="current-password"

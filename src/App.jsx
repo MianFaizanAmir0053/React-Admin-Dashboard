@@ -8,18 +8,15 @@ import List from "./pages/List";
 import store from "./store";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { setUser } from "./redux/authSlice";
+import ProductsList from "./pages/ProductsList";
 
 const RequireAuth = ({ children }) => {
   const dispatch = useDispatch();
   const logged = localStorage.getItem("user");
+
   if (logged) {
     const { email, password } = JSON.parse(logged);
-    // dispatch(setLoading(true));
     dispatch(setUser({ email, password }));
-    // dispatch(setLoading(false));
-    // dispatch(setError(null));
-    // localStorage.setItem("user", JSON.stringify({ email, password }));
-    //  navigate("/");
   }
 
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -43,19 +40,12 @@ function App() {
             />
             <Route path="login" element={<Login />} />
             <Route path="users">
-              <Route
-                index
-                element={
-                  <RequireAuth>
-                    <List />
-                  </RequireAuth>
-                }
-              />
+              <Route index element={<List />} />
               <Route
                 path="new"
                 element={
                   <RequireAuth>
-                    <New />
+                    <New type={"user"} />
                   </RequireAuth>
                 }
               />
@@ -72,16 +62,16 @@ function App() {
               <Route
                 index
                 element={
-                  <RequireAuth>
-                    <List />
-                  </RequireAuth>
+                  // <RequireAuth>
+                  <ProductsList />
+                  // </RequireAuth>
                 }
               />
               <Route
                 path="new"
                 element={
                   <RequireAuth>
-                    <New />
+                    <New type={"prod"} />
                   </RequireAuth>
                 }
               />

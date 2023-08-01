@@ -32,7 +32,7 @@ export default function UserTable() {
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "id", headerName: "ID", width: 120 },
     {
       field: "User",
       headerName: "User",
@@ -50,7 +50,11 @@ export default function UserTable() {
         );
       },
     },
-
+    {
+      field: "name",
+      headerName: "Username",
+      width: 120,
+    },
     {
       field: "email",
       headerName: "Email",
@@ -59,7 +63,12 @@ export default function UserTable() {
     {
       field: "address",
       headerName: "address",
-      width: 100,
+      width: 130,
+    },
+    {
+      field: "country",
+      headerName: "State",
+      width: 90,
     },
     {
       field: "status",
@@ -74,7 +83,7 @@ export default function UserTable() {
                 : "bg-yellow-100 text-yellow-600"
             }  p-1 w-fit rounded-md`}
           >
-            {params.row.status}
+            {"active"}
           </div>
         );
       },

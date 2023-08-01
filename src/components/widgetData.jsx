@@ -11,6 +11,7 @@ const Widget = [
       <PersonOutlineOutlinedIcon className="text-red-600 bg-red-200 rounded-md p-1" />
     ),
     color: "text-red-600",
+    link: "/users",
   },
   {
     title: "Order",
@@ -19,6 +20,7 @@ const Widget = [
       <ShoppingCartOutlinedIcon className="text-green-600 bg-green-200 rounded-md p-1" />
     ),
     color: "text-green-600",
+    link: "/products",
   },
   {
     title: "Sale",
@@ -27,6 +29,7 @@ const Widget = [
       <MonetizationOnOutlinedIcon className="text-blue-600 bg-blue-200 rounded-md p-1" />
     ),
     color: "text-blue-600",
+    link: "/",
   },
   {
     title: "Revenue",
@@ -35,6 +38,7 @@ const Widget = [
       <AccountBalanceWalletOutlinedIcon className="text-yellow-600 bg-yellow-200 rounded-md p-1" />
     ),
     color: "text-yellow-600",
+    link: "/",
   },
 ];
 

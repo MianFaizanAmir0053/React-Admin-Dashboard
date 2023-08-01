@@ -21,6 +21,7 @@ function Home() {
                 key={wid.title}
                 value={wid.value}
                 icon={wid.icon}
+                link={wid.link}
               />
             );
           })}
